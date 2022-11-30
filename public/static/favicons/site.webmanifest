@@ -1,0 +1,12 @@
+{
+    "name": "Will Stenzel",
+    "short_name": "willstenzel.com",
+    "description": "I help mindful innovators turn their ideas into reality.",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "display": "standalone",
+    "dir": "ltr",
+    "lang": "en-US",
+    "orientation": "portrait-primary",
+    "start_url": "../../index.html"
+}
