@@ -36,9 +36,15 @@
   column-gap: 2rem;
 }
 
-@screen sm {
+@screen xs {
   .masonry {
     column-count: 2;
+  }
+}
+
+@screen md {
+  .masonry {
+    column-count: 3;
   }
 }
 
