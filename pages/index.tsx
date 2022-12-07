@@ -56,7 +56,7 @@ const PAST_PROJECTS_JSON = [
   },
   {
     title: 'Prota Ventures',
-    description: 'Built knowledge infrastructure to enable the organization to scale more efficiently and automated manual import tasks.',
+    description: 'Built knowledge infrastructure to enable the organization to scale more efficiently and automated repetitive tasks.',
     image: '/prota-logo.png',
     url: 'https://www.protaventures.com/',
     links: []
