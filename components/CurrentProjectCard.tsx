@@ -32,7 +32,7 @@ export default function CurrentProjectCard({ title, description, image, url, lin
                         </div>
                     </div>
 
-                    <div className="mt-2 sm:pr-8">
+                    <div className="mt-2 sm:4">
                         <p className="text-sm text-slate-500 dark:text-gray-200">
                             {description}
                         </p>

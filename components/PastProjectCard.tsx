@@ -23,7 +23,7 @@ export default function PastProjectCard({ title, description, image, url, links 
                     </p>
                 </div>
             </div>
-            <div className="mt-4 sm:pr-8 grow">
+            <div className="mt-4 sm:pr-2 grow">
                 <p className="text-sm text-slate-500 dark:text-gray-200">
                     {description}
                 </p>
