@@ -5,6 +5,7 @@ import Container from '../components/Container';
 import CurrentProjectCard from '../components/CurrentProjectCard';
 import HorizontalSectionWrapper from 'components/HorizontalSectionWrapper';
 import VerticalSectionWrapper from 'components/VerticalSectionWrapper';
+import FreeResourceCard from 'components/FreeResourceCard';
 import PastProjectCard from 'components/PastProjectCard';
 import PhotoGallery from 'components/PhotoGallery';
 import RightArrow from 'components/svgs/RightArrow';
@@ -62,6 +63,29 @@ const PAST_PROJECTS_JSON = [
     links: []
   }];
 
+const FREE_RESOURCES = [
+  {
+    name: "Simple TikTok Notification System",
+    url: "https://willstenzel.gumroad.com/l/cohort-management-system-toolkit",
+    date: "July 3, 2022"
+  },
+  {
+    name: "Oasis Task Management Bundle",
+    url: "https://willstenzel.gumroad.com/l/oasis-task-management-bundle",
+    date: "June 1, 2022"
+  },
+  {
+    name: "Super-Charged Daily Journal Notion Template",
+    url: "https://willstenzel.gumroad.com/l/super-charged-dailly-journal-notion-template",
+    date: "March 31, 2022"
+  },
+  {
+    name: "Cohort Management System Toolkit",
+    url: "https://willstenzel.gumroad.com/l/cohort-management-system-toolkit",
+    date: "December 8, 2021"
+  },
+]
+
 export default function Home() {
   return (
     <Suspense fallback={null}>
@@ -113,12 +137,22 @@ export default function Home() {
             </div>
           </HorizontalSectionWrapper>
 
+          <VerticalSectionWrapper id="resources">
+            <h1 className="font-bold mb-1 text-xl sm:text-3xl tracking-tight text-black dark:text-white">
+              Free Resources
+            </h1>
+            <p className="text-gray-500 dark:text-gray-200 text-lg sm:text-xl mb-6">
+              {"Here are some free resources I've put together"}
+            </p>
+            {FREE_RESOURCES.map(e => <FreeResourceCard title={e.name} key={e.name} url={e.url} date={e.date} />)}
+          </VerticalSectionWrapper>
+
           <VerticalSectionWrapper id="photos">
-            <h1 className="font-bold text-xl w-60 sm:text-3xl tracking-tight text-black dark:text-white">
+            <h1 className="font-bold text-xl mb-1 w-60 sm:text-3xl tracking-tight text-black dark:text-white">
               Photos
             </h1>
-            <p className="text-gray-500 dark:text-gray-200 text-lg sm:text-xl mt-2 mb-6">
-              Documenting my life is something I really enjoy. Here are some photos from the past week :)
+            <p className="text-gray-500 dark:text-gray-200 text-lg sm:text-xl mb-6">
+              {"Documenting my life is something I really enjoy. Here are some photos from the past week :)"}
             </p>
             <PhotoGallery />
             <Link
