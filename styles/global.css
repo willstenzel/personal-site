@@ -55,6 +55,85 @@
   bottom: 4px;
 }
 
+/*  */
+/* Tools card styles */
+/*  */
+
+/* Expand the card when active */
+.tool-card.active {
+  flex-grow: 10;
+  max-width: 100%;
+}
+
+/* Show the description when active */
+.tool-card.active .label {
+  transform: translateX(0.5rem);
+}
+.tool-card.active .label .content > * {
+  transition-delay: 200ms;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* Have the tool heading text take translate up and to the right when it's active  */
+.tool-card.active .label .tool-heading {
+  transform: translate(80px, -50px);
+  padding-right: 80px;
+}
+.tool-card .label .tool-heading {
+  transform: 0;
+  transition-duration: 250ms;
+}
+
+/* Have the tool card take of 40% when width is small so the cards wrap */
+.tool-card {
+  min-width: 40%;
+}
+@screen sm {
+  .tool-card {
+    min-width: 0px;
+  }
+}
+
+/* Hide it when the card is minimized */
+.tool-card.minimized .label .tool-heading {
+  opacity: 0;
+  transition: opacity 350ms;
+}
+
+/* Show tool card at 80% with when expanded and 50px width when regular size */
+.tool-card.active img {
+  transition-duration: 350ms;
+  transition-delay: 0ms;
+  transition-property: max-width, transform;
+  max-width: 50px;
+}
+.tool-card img {
+  transition-delay: 300ms;
+  transition-duration: 700ms;
+  max-width: 80%;
+}
+
+/* Hide the expand icon and show the collapse icon when active */
+.tool-card.active .expand-icon {
+  opacity: 0;
+  transition-delay: 0ms;
+}
+
+.tool-card.active .collapse-icon {
+  opacity: 1;
+  transition-delay: 0ms;
+}
+
+
+.transition-base {
+  transition-duration: 700ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.25, 1);
+}
+
+
 html {
   min-width: 360px;
   scroll-behavior: smooth;

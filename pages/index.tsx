@@ -10,6 +10,7 @@ import PastProjectCard from 'components/PastProjectCard';
 import PhotoGallery from 'components/PhotoGallery';
 import RightArrow from 'components/svgs/RightArrow';
 import ConactCard from 'components/ConactCard';
+import Tools from 'components/Tools';
 import ProfilePhoto from 'components/tooltips/ProfilePhoto';
 import ModernTools from 'components/tooltips/ModernTools';
 import ToolTip from 'components/Tooltip';
@@ -136,6 +137,16 @@ export default function Home() {
               With rapidly changing business needs, the key to success is <b>adaptability</b>. Until recently, the only way to accomplish this was by building an application from scratch with a team of developers. Now, by thoughtfully leveraging <b>code and no-code</b> solutions, individuals or small teams can design products that <b>evolve quickly</b> while providing a <b>great user experience</b>.
             </div>
           </HorizontalSectionWrapper>
+
+          <VerticalSectionWrapper id="tools">
+            <h1 className="font-bold text-xl w-60 sm:text-3xl tracking-tight mb-1 text-black dark:text-white">
+              Tools
+            </h1>
+            <p className="text-gray-500 dark:text-gray-200 text-lg sm:text-xl mb-6">
+              These are some tools I enjoy using
+            </p>
+            <Tools />
+          </VerticalSectionWrapper>
 
           <VerticalSectionWrapper id="resources">
             <h1 className="font-bold mb-1 text-xl sm:text-3xl tracking-tight text-black dark:text-white">
