@@ -61,7 +61,7 @@
 
 /* Expand the card when active */
 .tool-card.active {
-  flex-grow: 10;
+  flex-grow: 8;
   max-width: 100%;
 }
 
@@ -86,16 +86,6 @@
   transition-duration: 250ms;
 }
 
-/* Have the tool card take of 40% when width is small so the cards wrap */
-.tool-card {
-  min-width: 40%;
-}
-@screen sm {
-  .tool-card {
-    min-width: 0px;
-  }
-}
-
 /* Hide it when the card is minimized */
 .tool-card.minimized .label .tool-heading {
   opacity: 0;
@@ -112,7 +102,8 @@
 .tool-card img {
   transition-delay: 300ms;
   transition-duration: 700ms;
-  max-width: 80%;
+  max-height: 40%;
+  width: fit-content;
 }
 
 /* Hide the expand icon and show the collapse icon when active */
