@@ -1,13 +1,14 @@
 import Image from "next/image";
+import { Tool } from "./ToolsList"
 
-const ToolCard = ({ icon, text, backgroundColor, iconColor, active, setActiveCard, minimized }) => {
-    const handleClick = () => {
-        if (active) {
-            setActiveCard(null);
-        } else {
-            setActiveCard(icon);
-        }
-    };
+type ToolCardProps = {
+    tool: Tool,
+    active: boolean,
+    minimized: boolean,
+    handleClick: () => void,
+};
+
+const ToolCard = ({ tool, active, minimized, handleClick }: ToolCardProps) => {
 
     const classes = `${active ? "active" : ""} ${minimized ? "minimized" : ""}
     group border-2 border-gray-200 dark:border-gray-600 rounded-lg
@@ -17,43 +18,35 @@ const ToolCard = ({ icon, text, backgroundColor, iconColor, active, setActiveCar
     return (
         <div className={classes} onClick={handleClick}>
             <div className="absolute flex flex-col w-full h-full label p-4 transition-base z-20">
-                <div className="icon justify-start items-center">
-                    <img src="/notion-logo.png" alt="Notion" className="transition-base" />
-                </div>
-                <div className="tool-heading">
-                    <div className="tool-title font-bold text-black ml-2">{text[0]}</div>
-                    <div className="tool-tags flex flex-row gap-1 flex-wrap justify-start">
-                        <div className="rounded-full px-2 py-1 bg-gray-200 text-gray-800 text-xs font-semibold">
-                            Tag 1
-                        </div>
-                        <div className="rounded-full px-2 py-1 bg-gray-200 text-gray-800 text-xs font-semibold">
-                            Tag 2
-                        </div>
-                        <div className="rounded-full px-2 py-1 bg-gray-200 text-gray-800 text-xs font-semibold">
-                            Tag 3
-                        </div>
-                        <div className="rounded-full px-2 py-1 bg-gray-200 text-gray-800 text-xs font-semibold">
-                            Tag 4
-                        </div>
+                <img src={`/${tool.image}`} alt={tool.image} className="transition-base" />
+                <div className="tool-heading mt-2">
+                    <div className="tool-title font-bold text-black ml-2">{tool.name}</div>
+                    <div className="tool-tags mt-1 flex flex-row gap-1 flex-wrap justify-start">
+                        {tool.tags.map((tag, index) => (
+                            <div key={index} className="tag text-xs font-semibold text-gray-500 bg-gray-200 rounded-full px-2 py-1">
+                                {tag}
+                                </div>
+                        ))}
                     </div>
                 </div>
-                <div className="content -mt-6 flex flex-col justify-center leading-tight text-black whitespace-pre">
-                    <div className="opacity-0 relative transform transition-base translate-x-8">{text[1]}</div>
+                <div className="content -mt-6 flex flex-col justify-center leading-tight text-black">
+                    <div className="opacity-0 relative transform transition-base translate-x-8">{tool.description}</div>
                 </div>
 
+                {/* TODO: Consider moving these to bottom-2 and right-2 */}
                 <div className="expand-icon absolute bottom-4 right-4 transform group-hover:scale-[1.15] transition-all">
                     <Image
                         alt="expand"
-                        height={32}
-                        width={32}
+                        height={24}
+                        width={24}
                         src="/expand.png"
                     />
                 </div>
                 <div className="collapse-icon opacity-0 absolute bottom-4 right-4 transform group-hover:scale-[1.15] transition-all">
                     <Image
                         alt="collapse"
-                        height={32}
-                        width={32}
+                        height={24}
+                        width={24}
                         src="/collapse.png"
                     />
                 </div>

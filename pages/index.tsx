@@ -10,10 +10,11 @@ import PastProjectCard from 'components/PastProjectCard';
 import PhotoGallery from 'components/PhotoGallery';
 import RightArrow from 'components/svgs/RightArrow';
 import ConactCard from 'components/ConactCard';
-import Tools from 'components/Tools';
+import ToolsList from 'components/ToolsList';
 import ProfilePhoto from 'components/tooltips/ProfilePhoto';
 import ModernTools from 'components/tooltips/ModernTools';
 import ToolTip from 'components/Tooltip';
+import useScreenWidth from 'hooks/useScreenWidth';
 
 const CURRENT_PROJECTS_JSON = [
   {
@@ -62,7 +63,8 @@ const PAST_PROJECTS_JSON = [
     image: '/prota-logo.png',
     url: 'https://www.protaventures.com/',
     links: []
-  }];
+  }
+];
 
 const FREE_RESOURCES = [
   {
@@ -85,9 +87,47 @@ const FREE_RESOURCES = [
     url: "https://willstenzel.gumroad.com/l/cohort-management-system-toolkit",
     date: "December 8, 2021"
   },
-]
+];
+
+export type Tool = {
+  name: string;
+  tags: string[];
+  description: string;
+  image: string;
+};
+
+const TOOLS: Tool[] = [
+  {
+    name: 'Notion',
+    tags: ['Notes', 'MVPs', 'Project Management'],
+    description: 'Notion is a glorious tool. I use it to organize and manage all my projects, tasks, and notes. Its database functionality and public API make it great for prototyping applications or building MVPs.',
+    image: 'notion-logo.png',
+  },
+  {
+    name: 'Super',
+    tags: ['Hosting', 'Static Sites'],
+    description: "Super is a tool that lets you turn a Notion page into a website. It's great for creating quick landing pages, wikis, and how-to guides.",
+    image: 'super-logo.png',
+  },
+  {
+    name: 'Github Copilot',
+    tags: ['AI', 'Code Gen', 'Development'],
+    description: "Github Co-pilot makes the tedious parts of coding a breeze. It autocompletes API calls, generates code snippets, and keeps me from having to google things.",
+    image: 'github-copilot-logo.png',
+  },
+  {
+    name: 'Vercel',
+    tags: ['Hosting', 'Serverless Functions'],
+    description: "Vercel makes it super easy to host websites (like this one!) and deploy serverless function which I use for complex automations.",
+    image: 'vercel-logo.png',
+  },
+];
+
 
 export default function Home() {
+  const width = useScreenWidth();
+  const isMobile = width < 768;
+
   return (
     <Suspense fallback={null}>
       <Container>
@@ -121,10 +161,10 @@ export default function Home() {
           </VerticalSectionWrapper>
 
           <VerticalSectionWrapper id="past-projects">
-            <h1 className="font-bold text-xl w-60 sm:text-3xl tracking-tight mb-1 text-black dark:text-white">
+            <h1 className="font-bold text-xl w-60 sm:text-3xl tracking-tight mb-4 text-black dark:text-white">
               Past Projects
             </h1>
-            <div className="flex gap-6 flex-col sm:flex-row sm:items-stretch">
+            <div className="flex gap-4 flex-col sm:flex-row sm:items-stretch">
               {PAST_PROJECTS_JSON.map(e => <PastProjectCard title={e.title} key={e.title} description={e.description} image={e.image} url={e.url} links={e.links} />)}
             </div>
           </VerticalSectionWrapper>
@@ -145,7 +185,15 @@ export default function Home() {
             <p className="text-gray-500 dark:text-gray-200 text-lg sm:text-xl mb-6">
               These are some tools I enjoy using
             </p>
-            <Tools />
+            {isMobile ? 
+              // map half of the tools to one tools card and the other half to another
+              <div className="flex flex-col gap-4">
+                <ToolsList tools={TOOLS.slice(0, Math.ceil(TOOLS.length / 2))} />
+                <ToolsList tools={TOOLS.slice(Math.ceil(TOOLS.length / 2))} />
+              </div>
+              :
+              <ToolsList tools={TOOLS} />
+            }
           </VerticalSectionWrapper>
 
           <VerticalSectionWrapper id="resources">
