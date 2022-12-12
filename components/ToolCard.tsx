@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Tool } from "./ToolsList"
+import { Tool } from "../pages/index"
 
 type ToolCardProps = {
     tool: Tool,
