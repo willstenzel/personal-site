@@ -206,7 +206,7 @@ export default function Home() {
             {FREE_RESOURCES.map(e => <FreeResourceCard title={e.name} key={e.name} url={e.url} date={e.date} />)}
           </VerticalSectionWrapper>
 
-          <VerticalSectionWrapper id="photos">
+          {/* <VerticalSectionWrapper id="photos">
             <h1 className="font-bold text-xl mb-1 w-60 sm:text-3xl tracking-tight text-black dark:text-white">
               Photos
             </h1>
@@ -223,7 +223,7 @@ export default function Home() {
                 <RightArrow className="h-6 w-6 ml-1" />
               </>
             </Link>
-          </VerticalSectionWrapper>
+          </VerticalSectionWrapper> */}
 
           <VerticalSectionWrapper id="contact">
             <h1 className="font-bold text-xl w-60 sm:text-3xl tracking-tight mb-1 text-black dark:text-white">
