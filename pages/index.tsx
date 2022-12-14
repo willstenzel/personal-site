@@ -100,7 +100,7 @@ const TOOLS: Tool[] = [
   {
     name: 'Notion',
     tags: ['Notes', 'MVPs', 'Project Management'],
-    description: 'Notion is a glorious tool. I use it to organize and manage all my projects, tasks, and notes. Its database functionality and public API make it great for prototyping applications or building MVPs.',
+    description: 'Notion is a glorious tool. I use it to organize all my projects, tasks, and notes. Its database functionality and API make it great for building MVPs.',
     image: 'notion-logo.png',
   },
   {
