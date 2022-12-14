@@ -1,10 +1,6 @@
 import { type NextRequest } from 'next/server';
 import { Client } from '@notionhq/client';
 
-export const config = {
-    runtime: 'experimental-edge'
-};
-
 type Photo = {
     date: string;
     url: string;
