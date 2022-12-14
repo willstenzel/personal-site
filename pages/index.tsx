@@ -69,7 +69,7 @@ const PAST_PROJECTS_JSON = [
 const FREE_RESOURCES = [
   {
     name: "Simple TikTok Notification System",
-    url: "https://willstenzel.gumroad.com/l/cohort-management-system-toolkit",
+    url: "https://willstenzel.gumroad.com/l/simple-tik-tok-notification-system",
     date: "July 3, 2022"
   },
   {
