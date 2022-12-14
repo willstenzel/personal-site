@@ -126,7 +126,7 @@ const TOOLS: Tool[] = [
 
 export default function Home() {
   const width = useScreenWidth();
-  const isMobile = width < 768;
+  const isMobile = width ? width < 768 : false;
 
   return (
     <Suspense fallback={null}>
