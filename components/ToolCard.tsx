@@ -34,7 +34,7 @@ const ToolCard = ({ tool, active, minimized, handleClick }: ToolCardProps) => {
                 </div>
 
                 {/* TODO: Consider moving these to bottom-2 and right-2 */}
-                <div className="expand-icon absolute bottom-4 right-4 transform group-hover:scale-[1.15] transition-all">
+                <div className="expand-icon absolute bottom-2 right-3 transform group-hover:scale-[1.15] transition-all">
                     <Image
                         alt="expand"
                         height={24}
@@ -42,7 +42,7 @@ const ToolCard = ({ tool, active, minimized, handleClick }: ToolCardProps) => {
                         src="/expand.png"
                     />
                 </div>
-                <div className="collapse-icon opacity-0 absolute bottom-4 right-4 transform group-hover:scale-[1.15] transition-all">
+                <div className="collapse-icon opacity-0 absolute bottom-2 right-4 transform group-hover:scale-[1.15] transition-all">
                     <Image
                         alt="collapse"
                         height={24}
