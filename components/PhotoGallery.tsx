@@ -8,7 +8,7 @@ const PhotoGallery = () => {
     fetch('/api/photos')
       .then((res) => res.json())
       .then((data) => {
-        setPhotos(data.photos)
+        setPhotos(data)
       })
   }, []);
 

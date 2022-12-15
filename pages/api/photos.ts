@@ -1,4 +1,4 @@
-import { type NextRequest } from 'next/server';
+import type { NextApiRequest, NextApiResponse } from 'next'
 import { Client } from '@notionhq/client';
 
 type Photo = {
@@ -6,7 +6,7 @@ type Photo = {
     url: string;
 };
 
-export default async function handler(req: NextRequest) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const oneWeekAgo = new Date();
     oneWeekAgo.setDate(oneWeekAgo.getDate() - 8);
 
@@ -51,17 +51,5 @@ export default async function handler(req: NextRequest) {
         return photo;
     });
 
-
-    return new Response(
-        JSON.stringify({
-            photos
-        }),
-        {
-            status: 200,
-            headers: {
-                'content-type': 'application/json',
-                'cache-control': 'public, s-maxage=3600, stale-while-revalidate=60'
-            }
-        }
-    );
+    res.status(200).json(photos);
 }
