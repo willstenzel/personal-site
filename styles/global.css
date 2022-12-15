@@ -94,7 +94,7 @@
 
 /* Show tool card at 80% with when expanded and 50px width when regular size */
 .tool-card.active img {
-  transition-duration: 350ms;
+  transition-duration: 150ms;
   transition-delay: 0ms;
   transition-property: max-width, transform;
   max-width: 50px;
