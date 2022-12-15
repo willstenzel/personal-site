@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useScreenWidth } from 'hooks/useScreenWidth';
 import ToolCard from 'components/ToolCard';
-import useScreenWidth from 'hooks/useScreenWidth';
 import { Tool } from '../pages/index';
 
 type toolsListProps = {

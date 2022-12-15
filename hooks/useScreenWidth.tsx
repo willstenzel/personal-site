@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 
-const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
+const isBrowser = () => typeof window !== 'undefined';
 
-function useScreenWidth() {
-    // If we're not in the browser, return 0
+export const useScreenWidth = () => {
+    // If we're not in the browser, return -1
     if (!isBrowser()) {
-        return 0;
+        return -1;
     }
 
     // Use the useState hook to store the current screen width in a state variable
@@ -23,5 +23,3 @@ function useScreenWidth() {
 
     return width;
 }
-
-export default useScreenWidth;

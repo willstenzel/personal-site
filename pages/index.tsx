@@ -5,16 +5,15 @@ import Container from '../components/Container';
 import CurrentProjectCard from '../components/CurrentProjectCard';
 import HorizontalSectionWrapper from 'components/HorizontalSectionWrapper';
 import VerticalSectionWrapper from 'components/VerticalSectionWrapper';
+import ToolsListWrapper from 'components/ToolsListWrapper';
 import FreeResourceCard from 'components/FreeResourceCard';
 import PastProjectCard from 'components/PastProjectCard';
 import PhotoGallery from 'components/PhotoGallery';
 import RightArrow from 'components/svgs/RightArrow';
 import ConactCard from 'components/ConactCard';
-import ToolsList from 'components/ToolsList';
 import ProfilePhoto from 'components/tooltips/ProfilePhoto';
 import ModernTools from 'components/tooltips/ModernTools';
 import ToolTip from 'components/Tooltip';
-import useScreenWidth from 'hooks/useScreenWidth';
 
 const CURRENT_PROJECTS_JSON = [
   {
@@ -125,9 +124,6 @@ const TOOLS: Tool[] = [
 
 
 export default function Home() {
-  const width = useScreenWidth();
-  const isMobile = width ? width < 768 : false;
-
   return (
     <Suspense fallback={null}>
       <Container>
@@ -185,15 +181,7 @@ export default function Home() {
             <p className="text-gray-500 dark:text-gray-200 text-lg sm:text-xl mb-6">
               These are some tools I enjoy using
             </p>
-            {isMobile ? 
-              // map half of the tools to one tools card and the other half to another
-              <div className="flex flex-col gap-4">
-                <ToolsList tools={TOOLS.slice(0, Math.ceil(TOOLS.length / 2))} />
-                <ToolsList tools={TOOLS.slice(Math.ceil(TOOLS.length / 2))} />
-              </div>
-              :
-              <ToolsList tools={TOOLS} />
-            }
+            <ToolsListWrapper tools={TOOLS} />
           </VerticalSectionWrapper>
 
           <VerticalSectionWrapper id="resources">
