@@ -129,7 +129,7 @@ export default function Home() {
       <Container>
         <div className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
           <div className="flex flex-col pr-4">
-            <h1 className="font-bold text-2xl md:text-4xl tracking-tight mb-2 text-black dark:text-white">
+            <h1 className="font-bold text-2xl sm:text-4xl tracking-tight mb-2 text-black dark:text-white">
               Hi! I’m{' '}
               <span className="text-violet-600 dark:text-purple-400">
                 Will Stenzel
