@@ -6,29 +6,39 @@
   fill: #fff;
 }
 
-/* Arrow to contact card on hover */
-.contact-card::after {
-  content: '↗';
-  position: absolute;
-  right: 5px;
-  bottom: 0px;
-  opacity: 0;
-  font-size: 16px;
-  transition-duration: .15s;
-  font-weight: 700;
-  color: rgb(124 58 237); /* text-violet-600 */
+
+@screen sm {
+  /* Arrow to contact card on hover */
+  .hover-arrow::after {
+    content: '↗';
+    position: absolute;
+    right: 5px;
+    bottom: 0px;
+    opacity: 0;
+    font-size: 16px;
+    transition-duration: .15s;
+    font-weight: 700;
+    color: rgb(124 58 237); /* text-violet-600 */
+  }
+
+  .dark .hover-arrow::after {
+    content: '↗';
+    position: absolute;
+    right: 5px;
+    bottom: 0px;
+    opacity: 0;
+    font-size: 16px;
+    transition-duration: .15s;
+    font-weight: 700;
+    color: rgb(192 132 252); /* text-purple-400 */
+  }
 }
 
-.dark .contact-card::after {
-  content: '↗';
-  position: absolute;
-  right: 5px;
-  bottom: 0px;
-  opacity: 0;
-  font-size: 16px;
-  transition-duration: .15s;
-  font-weight: 700;
-  color: rgb(192 132 252); /* text-purple-400 */
+/* Aligns the arow on hover */
+.hover-arrow:hover::after {
+  opacity: 1;
+  right: 12px;
+  bottom: 4px;
 }
 
 .masonry {
@@ -46,13 +56,6 @@
   .masonry {
     column-count: 3;
   }
-}
-
-/* Aligns the arow on hover */
-.contact-card:hover::after {
-  opacity: 1;
-  right: 12px;
-  bottom: 4px;
 }
 
 /*  */

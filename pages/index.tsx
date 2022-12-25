@@ -205,7 +205,7 @@ export default function Home() {
             <Link
               href="https://photos.willstenzel.com/"
               target={'_blank'}
-              className="flex items-center mt-6 text-gray-600 dark:text-gray-400 leading-7 rounded-lg hover:text-gray-800 dark:hover:text-gray-200 transform hover:scale-[1.04] transition-all h-6">
+              className="flex items-center mt-6 text-gray-600 dark:text-gray-400 leading-7 rounded-lg sm:hover:text-gray-800 sm:dark:hover:text-gray-200 transform sm:hover:scale-[1.04] transition-all h-6">
               <>
                 {'See more photos'}
                 <RightArrow className="h-6 w-6 ml-1" />
