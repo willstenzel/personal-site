@@ -6,7 +6,7 @@ import CurrentProjectCard from '../components/CurrentProjectCard';
 import HorizontalSectionWrapper from 'components/HorizontalSectionWrapper';
 import VerticalSectionWrapper from 'components/VerticalSectionWrapper';
 import ToolsListWrapper from 'components/ToolsListWrapper';
-import FreeResourceCard from 'components/FreeResourceCard';
+import FreeTemplateCard from 'components/FreeTemplateCard';
 import PastProjectCard from 'components/PastProjectCard';
 import PhotoGallery from 'components/PhotoGallery';
 import RightArrow from 'components/svgs/RightArrow';
@@ -37,7 +37,7 @@ const CURRENT_PROJECTS_JSON = [
 const PAST_PROJECTS_JSON = [
   {
     title: 'Oasis',
-    description: 'Founded a software develpoment mentorship organisation at Northeastern that helps students build their first software projects.',
+    description: 'Founded a software develpoment mentorship organization at Northeastern that helps students build their first software projects.',
     image: '/oasis-logo.png',
     url: 'https://oasisneu.com/',
     links: []
@@ -65,24 +65,28 @@ const PAST_PROJECTS_JSON = [
   }
 ];
 
-const FREE_RESOURCES = [
+const FREE_TEMPLATES = [
   {
     name: "Simple TikTok Notification System",
+    description: "Lets people signup via text msg (for those who don't use TikTok) and get notified when I post new content.",
     url: "https://willstenzel.gumroad.com/l/simple-tik-tok-notification-system",
     date: "July 3, 2022"
   },
   {
     name: "Oasis Task Management Bundle",
+    description: "Notion template for a team managing tasks and repeating events.",
     url: "https://willstenzel.gumroad.com/l/oasis-task-management-bundle",
     date: "June 1, 2022"
   },
   {
     name: "Super-Charged Daily Journal Notion Template",
+    description: "Notion journal databases that are searchable with the goal to promote greater reflection and connection.",
     url: "https://willstenzel.gumroad.com/l/super-charged-dailly-journal-notion-template",
     date: "March 31, 2022"
   },
   {
     name: "Cohort Management System Toolkit",
+    description: "A system that supports team projects by integrating Google Forms and Notion, creating a cohort management dashboard and a website.",
     url: "https://willstenzel.gumroad.com/l/cohort-management-system-toolkit",
     date: "December 8, 2021"
   },
@@ -184,14 +188,14 @@ export default function Home() {
             <ToolsListWrapper tools={TOOLS} />
           </VerticalSectionWrapper>
 
-          <VerticalSectionWrapper id="resources">
+          <VerticalSectionWrapper id="templates">
             <h1 className="font-bold mb-1 text-xl sm:text-3xl tracking-tight text-black dark:text-white">
-              Free Resources
+              Free Templates
             </h1>
             <p className="text-gray-500 dark:text-gray-200 text-lg sm:text-xl mb-6">
-              {"Here are some free resources I've put together"}
+              {"These are templates and systems that I’ve created using Notion to streamline or simplify my work. Feel free to use them and adapt them to your own needs."}
             </p>
-            {FREE_RESOURCES.map(e => <FreeResourceCard title={e.name} key={e.name} url={e.url} date={e.date} />)}
+            {FREE_TEMPLATES.map(e => <FreeTemplateCard title={e.name} description={e.description} key={e.name} url={e.url} date={e.date} />)}
           </VerticalSectionWrapper>
 
           <VerticalSectionWrapper id="photos">
@@ -205,7 +209,7 @@ export default function Home() {
             <Link
               href="https://photos.willstenzel.com/"
               target={'_blank'}
-              className="flex items-center mt-6 text-gray-600 dark:text-gray-400 leading-7 rounded-lg sm:hover:text-gray-800 sm:dark:hover:text-gray-200 transform sm:hover:scale-[1.04] transition-all h-6">
+              className="flex items-center mt-6 text-gray-600 dark:text-gray-300 leading-7 rounded-lg sm:hover:text-gray-800 sm:dark:hover:text-gray-200 transform sm:hover:scale-[1.04] transition-all h-6">
               <>
                 {'See more photos'}
                 <RightArrow className="h-6 w-6 ml-1" />
