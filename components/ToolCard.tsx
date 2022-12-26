@@ -20,17 +20,17 @@ const ToolCard = ({ tool, active, minimized, handleClick }: ToolCardProps) => {
             <div className="absolute flex flex-col w-full h-full label p-4 transition-base z-20">
                 <img src={`/${tool.image}`} alt={tool.image} className="transition-base" />
                 <div className="tool-heading mt-2">
-                    <div className="tool-title font-bold text-black ml-2">{tool.name}</div>
+                    <div className="tool-title font-bold text-black dark:text-white ml-2">{tool.name}</div>
                     <div className="tool-tags mt-1 flex flex-row gap-1 flex-wrap justify-start">
                         {tool.tags.map((tag, index) => (
-                            <div key={index} className="tag text-xs font-semibold text-gray-500 bg-gray-200 rounded-full px-2 py-1">
+                            <div key={index} className="tag text-xs font-semibold text-gray-500 bg-gray-200 dark:bg-transparent dark:bg-gray-700 dark:text-white rounded-full px-2 py-1">
                                 {tag}
-                                </div>
+                            </div>
                         ))}
                     </div>
                 </div>
-                <div className="content -mt-6 flex flex-col justify-center leading-tight text-black">
-                    <div className="opacity-0 relative transform transition-base translate-x-8">{tool.description}</div>
+                <div className="content -mt-6 flex flex-col justify-center leading-tight">
+                    <div className=" text-black dark:text-white opacity-0 relative transform transition-base translate-x-8">{tool.description}</div>
                 </div>
 
                 {/* TODO: Consider moving these to bottom-2 and right-2 */}
