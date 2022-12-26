@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useScreenWidth } from 'hooks/useScreenWidth';
 import ToolCard from 'components/ToolCard';
 import { Tool } from '../pages/index';
 
@@ -9,7 +8,6 @@ type toolsListProps = {
 
 const ToolsList = ({ tools }: toolsListProps) => {
     const [activeCard, setActiveCard] = useState(null);
-    const width = useScreenWidth();
 
     const handleClickFunction = (index: number) => {
         return () => {
@@ -23,7 +21,7 @@ const ToolsList = ({ tools }: toolsListProps) => {
     };
 
     return (
-        <div className={`flex flex-wrap items-stretch overflow-hidden w-full ${width > 460 ? "h-60" : "h-72" }`}>
+        <div className="flex flex-wrap items-stretch overflow-hidden w-full h-60 md:h-72">
             {tools.map((tool, index) => (
                 <ToolCard
                     key={index}
