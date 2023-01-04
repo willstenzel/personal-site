@@ -8,6 +8,22 @@ type ToolCardProps = {
     handleClick: () => void,
 };
 
+const renderToolIcon = (tool: Tool) => {
+    if (tool.image) {
+        return (
+            <img src={`/${tool.image}`} alt={tool.image} className="transition-base" />
+        );
+    } else {
+        return (
+            // Hide or show the light or dark image depending on the theme
+            <>
+                <img src={`/${tool.imageLight}`} alt={tool.image} className="block dark:hidden transition-base" />
+                <img src={`/${tool.imageDark}`} alt={tool.image} className="hidden dark:block transition-base" />
+            </>
+        );
+    }
+};
+
 const ToolCard = ({ tool, active, minimized, handleClick }: ToolCardProps) => {
 
     const classes = `${active ? "active" : ""} ${minimized ? "minimized" : ""}
@@ -18,7 +34,7 @@ const ToolCard = ({ tool, active, minimized, handleClick }: ToolCardProps) => {
     return (
         <div className={classes} onClick={handleClick}>
             <div className="absolute flex flex-col w-full h-full label p-4 transition-base z-20">
-                <img src={`/${tool.image}`} alt={tool.image} className="transition-base" />
+                {renderToolIcon(tool)}
                 <div className="tool-heading mt-2">
                     <div className="tool-title font-bold text-black dark:text-white ml-2">{tool.name}</div>
                     <div className="tool-tags mt-1 flex flex-row gap-1 flex-wrap justify-start">
@@ -40,6 +56,14 @@ const ToolCard = ({ tool, active, minimized, handleClick }: ToolCardProps) => {
                         height={24}
                         width={24}
                         src="/expand.png"
+                        className="block dark:hidden"
+                    />
+                    <Image
+                        alt="expand"
+                        height={24}
+                        width={24}
+                        src="/dark-mode-expand.png"
+                        className="hidden dark:block"
                     />
                 </div>
                 <div className="collapse-icon opacity-0 absolute bottom-2 right-4 transform group-hover:scale-[1.15] transition-all">
@@ -48,6 +72,14 @@ const ToolCard = ({ tool, active, minimized, handleClick }: ToolCardProps) => {
                         height={24}
                         width={24}
                         src="/collapse.png"
+                        className="block dark:hidden"
+                    />
+                    <Image
+                        alt="collapse"
+                        height={24}
+                        width={24}
+                        src="/dark-mode-collapse.png"
+                        className="hidden dark:block"
                     />
                 </div>
             </div>

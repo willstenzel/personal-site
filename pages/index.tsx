@@ -96,7 +96,9 @@ export type Tool = {
   name: string;
   tags: string[];
   description: string;
-  image: string;
+  image?: string;
+  imageLight?: string;
+  imageDark?: string;
 };
 
 const TOOLS: Tool[] = [
@@ -104,7 +106,8 @@ const TOOLS: Tool[] = [
     name: 'Notion',
     tags: ['Notes', 'MVPs', 'Project Management'],
     description: 'Notion is a glorious tool. I use it to organize all my projects, tasks, and notes. Its database functionality and API make it great for building MVPs.',
-    image: 'notion-logo.png',
+    imageLight: 'notion-logo.png',
+    imageDark: 'dark-mode-notion-logo.png',
   },
   {
     name: 'Super',
@@ -122,7 +125,8 @@ const TOOLS: Tool[] = [
     name: 'Vercel',
     tags: ['Hosting', 'Serverless Functions'],
     description: "Vercel makes it super easy to host websites (like this one!) and deploy serverless function which I use for complex automations.",
-    image: 'vercel-logo.png',
+    imageLight: 'vercel-logo.png',
+    imageDark: 'dark-mode-vercel-logo.png',
   },
 ];
 
