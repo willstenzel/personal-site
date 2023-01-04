@@ -11,7 +11,6 @@ import PastProjectCard from 'components/PastProjectCard';
 import PhotoGallery from 'components/PhotoGallery';
 import RightArrow from 'components/svgs/RightArrow';
 import ConactCard from 'components/ConactCard';
-import ProfilePhoto from 'components/tooltips/ProfilePhoto';
 import ModernTools from 'components/tooltips/ModernTools';
 import ToolTip from 'components/Tooltip';
 
