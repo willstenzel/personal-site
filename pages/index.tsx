@@ -138,12 +138,6 @@ export default function Home() {
               <span className="text-violet-600 dark:text-purple-400">
                 Will Stenzel
               </span>
-              {/* <ToolTip tooltip={<ProfilePhoto />}
-                offset={44}>
-                <span className="text-violet-600 dark:text-purple-400">
-                  Will Stenzel
-                </span>
-              </ToolTip> */}
               , I help mindful innovators turn their ideas into reality.
             </h1>
             <p className="text-gray-500 dark:text-gray-200 text-xl mb-8">
