@@ -200,7 +200,7 @@ export default function Home() {
               Photos
             </h1>
             <p className="text-gray-500 dark:text-gray-200 text-lg sm:text-xl mb-6">
-              {"Documenting my life is something I really enjoy. Here are some photos from the past week :)"}
+              {"Documenting my life is something I really enjoy. Here are some photos from the past week."}
             </p>
             <PhotoGallery />
             <Link
