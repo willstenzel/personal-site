@@ -66,6 +66,12 @@ const PAST_PROJECTS_JSON = [
 
 const FREE_TEMPLATES = [
   {
+    name: "Notion-powered Photo Journal",
+    description: "Step-by-step guide on how to create a photo journal website powered by a simple Notion database.",
+    url: "https://willstenzel.gumroad.com/l/notion-powered-photo-journal",
+    date: "March 12, 2023"
+  },
+  {
     name: "Simple TikTok Notification System",
     description: "Lets people signup via text msg (for those who don't use TikTok) and get notified when I post new content.",
     url: "https://willstenzel.gumroad.com/l/simple-tik-tok-notification-system",
