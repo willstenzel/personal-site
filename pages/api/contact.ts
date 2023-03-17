@@ -37,12 +37,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         });
     };
 
+    // Not worth creating new ZipMessage conversation yet becuase I would need to upgrade the plan to Premium
     const createNewZipMessageConversation = async (name: string) => {
         const response = await fetch('https://zipmessage.com/api/v1/conversations/create_conversation', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-
+                'Authorization': process.env.ZIPMESSAGE_TOKEN,
             },
             body: JSON.stringify({
                 "title": `Will / ${name}`,
@@ -68,8 +69,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         });
     };
 
-    const sendMessageToNotifyMyself = async (name: string, email: string, message: string, zipMessageUrl: string) => {
-        const body = `New contact submitted from website\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}\nZipMessage Link: ${zipMessageUrl}`;
+    const sendMessageToNotifyMyself = async (name: string, email: string, message: string) => {
+        const body = `New contact submitted from website\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
         await sendSMS(body);
     };
 
@@ -84,8 +85,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
         await logContactInNotion();
-        const zipMessageUrl = await createNewZipMessageConversation(name);
-        await sendMessageToNotifyMyself(name, email, message, zipMessageUrl);
+        // const zipMessageUrl = await createNewZipMessageConversation(name);
+        await sendMessageToNotifyMyself(name, email, message);
         res.status(200).json({ success: true });
     } catch (error) {
         await sendErrorMessageToMyself(name, email);
