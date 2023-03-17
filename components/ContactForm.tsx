@@ -6,16 +6,15 @@ const ContactForm = () => {
     const [message, setMessage] = useState('')
     const [isSending, setIsSending] = useState(false)
     const [isSent, setIsSent] = useState(false)
-    const [isError, setIsError] = useState(false)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
 
         setIsSending(true)
-        setIsError(false)
         setIsSent(false)
 
-        const res = await fetch('/api/contact', {
+        // Send the data to the backend
+        fetch('/api/contact', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -25,15 +24,13 @@ const ContactForm = () => {
                 email,
                 message,
             }),
-        })
+        });
 
-        if (res.status === 200) {
+        // Mock the send becuase there are no errors we're returning from the backend
+        setTimeout(() => {
+            setIsSending(false)
             setIsSent(true)
-        } else {
-            setIsError(true)
-        }
-
-        setIsSending(false)
+        }, 750)
     }
 
     return (
@@ -80,20 +77,15 @@ const ContactForm = () => {
                     className="text-black dark:text-white border-2 border-gray-200 dark:border-gray-600 rounded-md p-2 mt-1"
                 />
             </div>
+           
             <div className="flex flex-col mt-6">
                 <button
                     type="submit"
                     className="border-2 border-gray-200 dark:border-gray-600 text-black dark:text-white rounded-md p-2 hover:shadow-sm transition-shadow duration-100"
                 >
-                    {isSending ? 'Sending...' : 'Send'}
+                    {isSending ? 'Sending...' :  isSent ? 'Sent  ✔️' : 'Send'}
                 </button>
             </div>
-            {isSent && (
-                <div className="text-purple-500 dark:text-purple-200 mt-4">Message sent successfully!</div>
-            )}
-            {isError && (
-                <div className="text-gray-500 dark:text-gray-200 mt-4">Error sending message. Please try again.</div>
-            )}
         </form>
     )
 }

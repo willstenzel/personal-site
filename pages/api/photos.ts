@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const notion = new Client({ auth: process.env.NOTION_TOKEN });
     const response = await notion.databases.query({
-        database_id: process.env.NOTION_DATABASE_ID as string,
+        database_id: process.env.NOTION_PHOTOS_DATABASE_ID as string,
         filter: {
             and: [
                 {
