@@ -11,14 +11,14 @@ type ToolCardProps = {
 const renderToolIcon = (tool: Tool) => {
     if (tool.image) {
         return (
-            <img src={`/${tool.image}`} alt={tool.image} className="transition-base" />
+            <img src={`/tools/${tool.image}`} alt={tool.image} className="transition-base" />
         );
     } else {
         return (
             // Hide or show the light or dark image depending on the theme
             <>
-                <img src={`/${tool.imageLight}`} alt={tool.image} className="block dark:hidden transition-base" />
-                <img src={`/${tool.imageDark}`} alt={tool.image} className="hidden dark:block transition-base" />
+                <img src={`/tools/${tool.imageLight}`} alt={tool.image} className="block dark:hidden transition-base" />
+                <img src={`/tools/${tool.imageDark}`} alt={tool.image} className="hidden dark:block transition-base" />
             </>
         );
     }
