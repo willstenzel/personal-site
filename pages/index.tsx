@@ -225,12 +225,9 @@ export default function Home() {
               Contact
             </h1>
             <p className="text-gray-500 dark:text-gray-200 text-lg sm:text-xl mb-6">
-              I'm always looking for new opportunities to work with passionate people.
+              If you have any questions or would like to work together, feel free to reach out!
             </p>
-            <div className="flex flex-col md:flex-row gap-6">
-              <ConactCard title="@WillStenzel" url="https://twitter.com/willstenzel" description="If you'd like to quickly connect, the best place is on Twitter." />
-              <ConactCard title="stenzel.will@gmail.com" url="mailto:stenzel.will@gmail.com" description="If you want to work together, feel free to send me an email." />
-            </div>
+            <ContactForm />
           </VerticalSectionWrapper>
         </div>
       </Container >
