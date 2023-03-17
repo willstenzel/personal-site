@@ -83,7 +83,7 @@ const ContactForm = () => {
             <div className="flex flex-col mt-6">
                 <button
                     type="submit"
-                    className="bg-gray-800 dark:bg-gray-200 text-white dark:text-black rounded-md p-2"
+                    className="border-2 border-gray-200 dark:border-gray-600 text-black dark:text-white rounded-md p-2 hover:shadow-sm transition-shadow duration-100"
                 >
                     {isSending ? 'Sending...' : 'Send'}
                 </button>
