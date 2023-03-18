@@ -21,7 +21,7 @@ const ToolsList = ({ tools }: toolsListProps) => {
     };
 
     return (
-        <div className="flex flex-wrap items-stretch overflow-hidden w-full h-60 md:h-72">
+        <div className="flex flex-wrap mb-4 items-stretch overflow-hidden w-full h-56 md:h-60">
             {tools.map((tool, index) => (
                 <ToolCard
                     key={index}
