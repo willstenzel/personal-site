@@ -112,8 +112,8 @@ const TOOLS: Tool[] = [
     name: 'Notion',
     tags: ['Notes', 'MVPs', 'Project Management'],
     description: 'Notion is a glorious tool. I use it to organize all my projects, tasks, and notes. Its database functionality and API make it great for building MVPs.',
-    imageLight: 'notion-logo.png',
-    imageDark: 'dark-mode-notion-logo.png',
+    imageLight: 'notion-light.png',
+    imageDark: 'notion-dark.png',
   },
   {
     name: 'Super',
@@ -131,8 +131,35 @@ const TOOLS: Tool[] = [
     name: 'Vercel',
     tags: ['Hosting', 'Serverless Functions'],
     description: "Vercel makes it super easy to host websites (like this one!) and deploy serverless function which I use for complex automations.",
-    imageLight: 'vercel-logo.png',
-    imageDark: 'dark-mode-vercel-logo.png',
+    imageLight: 'vercel-light.png',
+    imageDark: 'vercel-dark.png',
+  },
+  {
+    name: 'Visual Studio Code',
+    tags: ['Development'],
+    description: "Visual Studio Code is my go to IDE. It's lightweight, fast, and has a great plugin ecosystem.",
+    imageLight: 'vs-code-light.png',
+    imageDark: 'vs-code-dark.png',
+  },
+  {
+    name: 'Gather.town',
+    tags: ['Virtual Events', 'Virtual Spaces'],
+    description: "Gather.town is a tool that lets you create virtual spaces for events. It's our primary community building tool for the Solopreneur Playground.",
+    imageLight: 'gather-town-light.png',
+    imageDark: 'gather-town-dark.png',
+  },
+  {
+    name: 'Next.js',
+    tags: ['React', 'Static Sites'],
+    description: "Next.js is a React framework that makes it easy to build static sites and serverless functions. I use it to build this website.",
+    imageLight: 'nextjs-light.png',
+    imageDark: 'nextjs-dark.png',
+  },
+  {
+    name: 'Tensorflow.js',
+    tags: ['Machine Learning', 'AI'],
+    description: "Tensorflow.js is a library that makes it easy to build machine learning models in the browser. I'm currently using it to help create custom nose filters.",
+    image: 'tensorflow.png',
   },
 ];
 
