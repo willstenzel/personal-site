@@ -81,9 +81,9 @@ const ContactForm = () => {
             <div className="flex flex-col mt-6">
                 <button
                     type="submit"
-                    className="border-2 border-gray-200 dark:border-gray-600 text-black dark:text-white rounded-md p-2 hover:shadow-sm transition-shadow duration-100"
+                    className="max-w-[160px] font-semibold border-2 bg-white dark:bg-transparent text-black dark:text-white rounded-md p-2 hover:shadow-sm transition-shadow duration-200"
                 >
-                    {isSending ? 'Sending...' :  isSent ? 'Sent  ✔️' : 'Send'}
+                    {isSending ? 'Sending...' :  isSent ? 'Sent  ✔️' : 'Submit'}
                 </button>
             </div>
         </form>
