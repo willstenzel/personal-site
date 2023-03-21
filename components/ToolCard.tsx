@@ -27,7 +27,7 @@ const renderToolIcon = (tool: Tool) => {
 const ToolCard = ({ tool, active, minimized, handleClick }: ToolCardProps) => {
 
     const classes = `${active ? "active" : ""} ${minimized ? "minimized" : ""}
-    group border-2 border-gray-200 dark:border-gray-600 rounded-lg
+    group border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900 rounded-lg
     tool-card cursor-pointer flex-grow mr-4 overflow-hidden relative rounded-2xl transition-base
   `;
 
