@@ -161,6 +161,39 @@ const TOOLS: Tool[] = [
     description: "Tensorflow.js is a library that makes it easy to build machine learning models in the browser. I'm currently using it to help create custom nose filters.",
     image: 'tensorflow.png',
   },
+  {
+    name: 'Midjourney',
+    tags: ['AI Art'],
+    description: "Midjourney is a tool that lets you create generative art which I'm using it to create custom exeperiences in Gather.town for the Solopreneur Playground.",
+    imageLight: 'midjourney-light.png',
+    imageDark: 'midjourney-dark.png',
+  },
+  // {
+  //   name: 'OpenAI',
+  //   tags: ['AI', 'Text Generation'],
+  //   description: "OpenAI is a tool that lets you create AI models.",
+  //   imagelight: 'openai-light.png',
+  //   imagedark: 'openai-dark.png',
+  // },
+  {
+    name: 'Miro',
+    tags: ['Whiteboarding', 'Flowcharts'],
+    description: "Miro is a tool that lets you create virtual whiteboards. It's great for creating flowcharts and brainstorming ideas.",
+    image: 'miro.png',
+  },
+  {
+    name: 'Tally Forms',
+    tags: ['Forms', 'Surveys'],
+    description: "Tally Forms is a tool that lets you create forms and surveys with a simple Notion style editor. It makes creating forms a breeze.",
+    image: 'tally-forms.png',
+  },
+  {
+    name: 'Loops',
+    tags: ['Email Marketing', 'Newsletters'],
+    description: "Loops is a magical email tool. It's has an simple opnionated interface that makes it easy to create beautiful emails and track performance.",
+    imageLight: 'loops-light.png',
+    imageDark: 'loops-dark.png',
+  },
 ];
 
 
