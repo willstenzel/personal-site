@@ -11,7 +11,7 @@ import PastProjectCard from 'components/PastProjectCard';
 import PhotoGallery from 'components/PhotoGallery';
 import RightArrow from 'components/svgs/RightArrow';
 import ContactForm from 'components/ContactForm';
-import ConactCard from 'components/ConactCard';
+import ContactCard from 'components/ContactCard';
 import ModernTools from 'components/tooltips/ModernTools';
 import ToolTip from 'components/Tooltip';
 
