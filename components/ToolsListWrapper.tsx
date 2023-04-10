@@ -1,21 +1,42 @@
 import ToolsList from './ToolsList';
 import { Tool } from 'pages';
+import MobileToolCard from './MobileToolCard';
 
 type toolsListWrapperProps = {
     tools: Tool[]
 };
 
-// This component will render the tools list in two rows on mobile and one row on desktop
-const ToolsListWrapper = ({ tools }: toolsListWrapperProps) => (
-    <>
-        <div className="flex flex-col gap-4 md:hidden">
-            <ToolsList tools={tools.slice(0, Math.ceil(tools.length / 2))} />
-            <ToolsList tools={tools.slice(Math.ceil(tools.length / 2))} />
-        </div>
-        <div className="hidden md:block">
-            <ToolsList tools={tools} />
-        </div>
-    </>
-);
+
+const ToolsListWrapper = ({ tools }: toolsListWrapperProps) => {
+    let toolsListGroups = [];
+
+    for (let i = 0; i < tools.length; i += 4) {
+        toolsListGroups.push(tools.slice(i, i + 4));
+    }
+
+    return (
+        <>
+            {/* Large screen */}
+            <div className="flex-col gap-4 hidden md:block">
+                {toolsListGroups.map((toolsListGroup, index) => (<ToolsList key={index} tools={toolsListGroup} />))}
+            </div>
+            {/* Medium screen */}
+            <div className="flex-col hidden sm:block md:hidden">
+                {toolsListGroups.map((toolsListGroup, index) => (
+                    <>
+                        <ToolsList tools={toolsListGroup.slice(0, 2)} />
+                        <ToolsList tools={toolsListGroup.slice(2, 4)} />
+                    </>
+                ))}
+            </div>
+            {/* Small screen */}
+            <div className="flex flex-col gap-4 sm:hidden">
+                {tools.map((tool, index) => (
+                    <MobileToolCard key={index} tool={tool} />
+                ))}
+            </div>
+        </>
+    )
+};
 
 export default ToolsListWrapper;

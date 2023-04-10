@@ -11,14 +11,14 @@ type ToolCardProps = {
 const renderToolIcon = (tool: Tool) => {
     if (tool.image) {
         return (
-            <img src={`/${tool.image}`} alt={tool.image} className="transition-base" />
+            <img src={`/tools/${tool.image}`} alt={tool.image} className="transition-base" />
         );
     } else {
         return (
             // Hide or show the light or dark image depending on the theme
             <>
-                <img src={`/${tool.imageLight}`} alt={tool.image} className="block dark:hidden transition-base" />
-                <img src={`/${tool.imageDark}`} alt={tool.image} className="hidden dark:block transition-base" />
+                <img src={`/tools/${tool.imageLight}`} alt={tool.image} className="block dark:hidden transition-base" />
+                <img src={`/tools/${tool.imageDark}`} alt={tool.image} className="hidden dark:block transition-base" />
             </>
         );
     }
@@ -27,7 +27,7 @@ const renderToolIcon = (tool: Tool) => {
 const ToolCard = ({ tool, active, minimized, handleClick }: ToolCardProps) => {
 
     const classes = `${active ? "active" : ""} ${minimized ? "minimized" : ""}
-    group border-2 border-gray-200 dark:border-gray-600 rounded-lg
+    group border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900 rounded-lg
     tool-card cursor-pointer flex-grow mr-4 overflow-hidden relative rounded-2xl transition-base
   `;
 

@@ -10,7 +10,8 @@ import FreeTemplateCard from 'components/FreeTemplateCard';
 import PastProjectCard from 'components/PastProjectCard';
 import PhotoGallery from 'components/PhotoGallery';
 import RightArrow from 'components/svgs/RightArrow';
-import ConactCard from 'components/ConactCard';
+import ContactForm from 'components/ContactForm';
+import ContactCard from 'components/ContactCard';
 import ModernTools from 'components/tooltips/ModernTools';
 import ToolTip from 'components/Tooltip';
 
@@ -111,8 +112,8 @@ const TOOLS: Tool[] = [
     name: 'Notion',
     tags: ['Notes', 'MVPs', 'Project Management'],
     description: 'Notion is a glorious tool. I use it to organize all my projects, tasks, and notes. Its database functionality and API make it great for building MVPs.',
-    imageLight: 'notion-logo.png',
-    imageDark: 'dark-mode-notion-logo.png',
+    imageLight: 'notion-light.png',
+    imageDark: 'notion-dark.png',
   },
   {
     name: 'Super',
@@ -130,9 +131,70 @@ const TOOLS: Tool[] = [
     name: 'Vercel',
     tags: ['Hosting', 'Serverless Functions'],
     description: "Vercel makes it super easy to host websites (like this one!) and deploy serverless function which I use for complex automations.",
-    imageLight: 'vercel-logo.png',
-    imageDark: 'dark-mode-vercel-logo.png',
+    imageLight: 'vercel-light.png',
+    imageDark: 'vercel-dark.png',
   },
+  {
+    name: 'Visual Studio Code',
+    tags: ['Development'],
+    description: "Visual Studio Code is my go to IDE. It's lightweight, fast, and has a great plugin ecosystem.",
+    imageLight: 'vs-code-light.png',
+    imageDark: 'vs-code-dark.png',
+  },
+  {
+    name: 'Next.js',
+    tags: ['React', 'Static Sites'],
+    description: "Next.js is a React framework that makes it easy to build static sites and serverless functions. I use it to build this website.",
+    imageLight: 'nextjs-light.png',
+    imageDark: 'nextjs-dark.png',
+  },
+  {
+    name: 'Gather.town',
+    tags: ['Virtual Events', 'Virtual Spaces'],
+    description: "Gather.town is a tool that lets you create virtual spaces for events. It's our primary community building tool for the Solopreneur Playground.",
+    imageLight: 'gather-town-light.png',
+    imageDark: 'gather-town-dark.png',
+  },
+  {
+    name: 'Tensorflow.js',
+    tags: ['Machine Learning', 'AI'],
+    description: "Tensorflow.js is a library that makes it easy to build machine learning models in the browser. I'm currently using it to help create custom nose filters.",
+    image: 'tensorflow.png',
+  },
+  {
+    name: 'Miro',
+    tags: ['Whiteboarding', 'Flowcharts'],
+    description: "Miro is a tool that lets you create virtual whiteboards. It's great for creating flowcharts and brainstorming ideas.",
+    image: 'miro.png',
+  },
+  {
+    name: 'Tally Forms',
+    tags: ['Forms', 'Surveys'],
+    description: "Tally Forms is a tool that lets you create forms and surveys with a simple Notion style editor. It makes creating forms a breeze.",
+    imageLight: 'tally-forms-light.png',
+    imageDark: 'tally-forms-dark.png',
+  },
+  {
+    name: 'Loops',
+    tags: ['Email Marketing', 'Newsletters'],
+    description: "Loops is a magical email tool. It's has an simple opnionated interface that makes it easy to create beautiful emails and track performance.",
+    imageLight: 'loops-light.png',
+    imageDark: 'loops-dark.png',
+  },
+  {
+    name: 'Midjourney',
+    tags: ['AI Art'],
+    description: "Midjourney is a tool that lets you create generative art which I'm using it to create custom exeperiences in Gather.town for the Solopreneur Playground.",
+    imageLight: 'midjourney-light.png',
+    imageDark: 'midjourney-dark.png',
+  },
+  // {
+  //   name: 'OpenAI',
+  //   tags: ['AI', 'Text Generation'],
+  //   description: "OpenAI is a tool that lets you create AI models.",
+  //   imagelight: 'openai-light.png',
+  //   imagedark: 'openai-dark.png',
+  // },
 ];
 
 
@@ -140,7 +202,7 @@ export default function Home() {
   return (
     <Suspense fallback={null}>
       <Container>
-        <div className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-16">
+        <div className="flex flex-col justify-center items-start max-w-3xl border-gray-200 dark:border-gray-700 mx-auto pb-32">
           <div className="flex flex-col pr-4">
             <h1 className="font-bold text-2xl sm:text-4xl tracking-tight mb-2 text-black dark:text-white">
               Hi! I’m{' '}
@@ -225,12 +287,9 @@ export default function Home() {
               Contact
             </h1>
             <p className="text-gray-500 dark:text-gray-200 text-lg sm:text-xl mb-6">
-              I'm always looking for new opportunities to work with passionate people.
+              If you have any questions or would like to work together, feel free to reach out!
             </p>
-            <div className="flex flex-col md:flex-row gap-6">
-              <ConactCard title="@WillStenzel" url="https://twitter.com/willstenzel" description="If you'd like to quickly connect, the best place is on Twitter." />
-              <ConactCard title="stenzel.will@gmail.com" url="mailto:stenzel.will@gmail.com" description="If you want to work together, feel free to send me an email." />
-            </div>
+            <ContactForm />
           </VerticalSectionWrapper>
         </div>
       </Container >
