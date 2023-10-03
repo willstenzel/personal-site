@@ -11,21 +11,8 @@ import PastProjectCard from 'components/PastProjectCard';
 import PhotoGallery from 'components/PhotoGallery';
 import RightArrow from 'components/svgs/RightArrow';
 import ContactForm from 'components/ContactForm';
-import ContactCard from 'components/ContactCard';
-import ModernTools from 'components/tooltips/ModernTools';
-import ToolTip from 'components/Tooltip';
 
 const CURRENT_PROJECTS_JSON = [
-  {
-    title: 'Supersynchronous',
-    description: 'I work as an operations developer in the Notion pod at Supersynchronous. We build internal tools which help businesses scale.',
-    image: '/supsync.jpeg',
-    url: 'https://supsync.com/',
-    links: [{
-      icon: 'Twitter',
-      url: 'https://twitter.com/@supsync'
-    }]
-  },
   {
     title: 'Solopreneur Playground',
     description: 'Solopreneur Playground is a community that brings together solopreneurs finding their niche to share inspiration, stories, and challenges to help people discover ways to work that feel like play.',
