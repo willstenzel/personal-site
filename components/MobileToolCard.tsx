@@ -30,7 +30,7 @@ const MobileToolCard = ({ tool }: MobileToolCardProps) => {
     return (
         <div className={classes}>
             <div className="flex flex-row align-start w-full label p-4 transition-base z-20">
-                <div className="h-[72px]">
+                <div className="h-[72px] w-[72px]">
                     {renderToolIcon(tool)}
                 </div>
                 <div className="tool-heading m-2 ml-4">
