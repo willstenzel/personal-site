@@ -35,7 +35,7 @@ const MobileToolCard = ({ tool }: MobileToolCardProps) => {
                 </div>
                 <div className="tool-heading m-2 ml-4">
                     <div className="tool-title font-bold text-black dark:text-white ml-2">{tool.name}</div>
-                    <div className="tool-tags mt-1 flex flex-row gap-1 flex-wrap justify-start">
+                    <div className="tool-tags mt-1 ml-1 flex flex-row gap-1 flex-wrap justify-start">
                         {tool.tags.map((tag, index) => (
                             <div key={index} className="tag text-xs font-semibold text-gray-500 bg-gray-200 dark:bg-transparent dark:bg-gray-700 dark:text-white rounded-full px-2 py-1">
                                 {tag}

@@ -39,7 +39,7 @@ const ToolCard = ({ tool, active, minimized, handleClick }: ToolCardProps) => {
                     <div className="tool-title font-bold text-black dark:text-white ml-2">{tool.name}</div>
                     <div className="tool-tags mt-1 flex flex-row gap-1 flex-wrap justify-start">
                         {tool.tags.map((tag, index) => (
-                            <div key={index} className="tag text-xs font-semibold text-gray-500 bg-gray-200 dark:bg-transparent dark:bg-gray-700 dark:text-white rounded-full px-2 py-1">
+                            <div key={index} className="tag text-xs font-semibold text-gray-500 bg-gray-200 dark:bg-transparent dark:bg-gray-700 dark:text-white rounded-full ml-[2px] px-2 py-1">
                                 {tag}
                             </div>
                         ))}
