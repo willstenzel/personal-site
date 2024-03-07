@@ -17,9 +17,17 @@ const CURRENT_PROJECTS_JSON = [
     title: 'Solopreneur Playground',
     description: 'Solopreneur Playground is a community that brings together solopreneurs finding their niche to share inspiration, stories, and challenges to help people discover ways to work that feel like play.',
     image: '/solopreneur-playground.png',
+    url: 'https://solopreneurplayground.com/',
+    links: []
+  },
+  {
+    title: 'Personalized Nose Filters',
+    description: 'Working on a project to create personalized custom fit nose filters for people with allergies. The goal is to use imaging techniques to detect nose shape and size and then 3D print custom filters.',
+    image: '/nose-filters.png',
     url: '',
     links: []
   }];
+
 
 const PAST_PROJECTS_JSON = [
   {
