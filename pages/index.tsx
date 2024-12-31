@@ -116,19 +116,6 @@ const TOOLS: Tool[] = [
     image: 'super-logo.png',
   },
   {
-    name: 'Github Copilot',
-    tags: ['AI', 'Code Gen', 'Development'],
-    description: "Github Co-pilot makes the tedious parts of coding a breeze. It autocompletes API calls, generates code snippets, and keeps me from having to google things.",
-    image: 'github-copilot-logo.png',
-  },
-  {
-    name: 'Vercel',
-    tags: ['Hosting', 'Serverless Functions'],
-    description: "Vercel makes it super easy to host websites (like this one!) and deploy serverless function which I use for complex automations.",
-    imageLight: 'vercel-light.png',
-    imageDark: 'vercel-dark.png',
-  },
-  {
     name: 'Visual Studio Code',
     tags: ['Development'],
     description: "Visual Studio Code is my go to IDE. It's lightweight, fast, and has a great plugin ecosystem.",
@@ -141,13 +128,6 @@ const TOOLS: Tool[] = [
     description: "Next.js is a React framework that makes it easy to build static sites and serverless functions. I use it to build this website.",
     imageLight: 'nextjs-light.png',
     imageDark: 'nextjs-dark.png',
-  },
-  {
-    name: 'Gather.town',
-    tags: ['Virtual Events', 'Virtual Spaces'],
-    description: "Gather.town is a tool that lets you create virtual spaces for events. It's our primary community building tool for the Solopreneur Playground.",
-    imageLight: 'gather-town-light.png',
-    imageDark: 'gather-town-dark.png',
   },
   {
     name: 'Tensorflow.js',
@@ -175,20 +155,6 @@ const TOOLS: Tool[] = [
     imageLight: 'loops-light.png',
     imageDark: 'loops-dark.png',
   },
-  {
-    name: 'Midjourney',
-    tags: ['AI Art'],
-    description: "Midjourney is a tool that lets you create generative art which I'm using it to create custom exeperiences in Gather.town for the Solopreneur Playground.",
-    imageLight: 'midjourney-light.png',
-    imageDark: 'midjourney-dark.png',
-  },
-  // {
-  //   name: 'OpenAI',
-  //   tags: ['AI', 'Text Generation'],
-  //   description: "OpenAI is a tool that lets you create AI models.",
-  //   imagelight: 'openai-light.png',
-  //   imagedark: 'openai-dark.png',
-  // },
 ];
 
 
