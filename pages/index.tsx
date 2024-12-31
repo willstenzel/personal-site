@@ -14,15 +14,15 @@ import ContactForm from 'components/ContactForm';
 
 const CURRENT_PROJECTS_JSON = [
   {
-    title: 'Solopreneur Playground',
-    description: 'Solopreneur Playground is a community that brings together solopreneurs finding their niche to share inspiration, stories, and challenges to help people discover ways to work that feel like play.',
-    image: '/solopreneur-playground.png',
-    url: 'https://solopreneurplayground.com/',
+    title: 'Dialed Accountability',
+    description: 'A tool that empowers community leaders to boost member engagement through structured accountability challenges. It streamlines challenge creation, progress tracking, and participant communication to foster meaningful connections.',
+    image: '/dialed-accountability.png',
+    url: 'https://dialed.tech',
     links: []
   },
   {
     title: 'Personalized Nose Filters',
-    description: 'Working on a project to create personalized custom fit nose filters for people with allergies. The goal is to use imaging techniques to detect nose shape and size and then 3D print custom filters.',
+    description: 'Developing personalized 3D-printed nose filters to help people with allergies breathe better. Using video imaging techniques, we capture detailed nasal measurements to ensure optimal comfort and filtration efficiency.',
     image: '/nose-filters.png',
     url: '',
     links: []
@@ -30,6 +30,13 @@ const CURRENT_PROJECTS_JSON = [
 
 
 const PAST_PROJECTS_JSON = [
+  {
+    title: 'Solopreneur Playground',
+    description: 'A community that brings together solopreneurs finding their niche to share inspiration, stories, and challenges to help people discover ways to work that feel like play.',
+    image: '/solopreneur-playground-logo.png',
+    url: 'https://solopreneurplayground.com/',
+    links: []
+  },
   {
     title: 'Oasis',
     description: 'Founded a software develpoment mentorship organization at Northeastern that helps students build their first software projects.',
@@ -41,7 +48,6 @@ const PAST_PROJECTS_JSON = [
     title: 'Office Hours App',
     description: 'Built a web app that manages the queueing system for students and TA\'s and provides analytics to professors and administrators at Northeastern.',
     image: '/sandbox-logo.png',
-    url: 'https://info.khouryofficehours.com/',
     links: [{
       icon: "News",
       url: 'https://news.northeastern.edu/2021/02/02/this-app-helps-students-get-more-face-time-with-professors/'
@@ -50,13 +56,6 @@ const PAST_PROJECTS_JSON = [
       icon: "Github",
       url: 'https://github.com/sandboxnu/office-hours'
     }]
-  },
-  {
-    title: 'Prota Ventures',
-    description: 'Built knowledge infrastructure to enable the organization to scale more efficiently and automated repetitive tasks.',
-    image: '/prota-logo.png',
-    url: 'https://www.protaventures.com/',
-    links: []
   }
 ];
 
