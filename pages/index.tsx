@@ -14,22 +14,29 @@ import ContactForm from 'components/ContactForm';
 
 const CURRENT_PROJECTS_JSON = [
   {
-    title: 'Dialed Accountability',
-    description: 'A tool that empowers community leaders to boost member engagement through structured accountability challenges. It streamlines challenge creation, progress tracking, and participant communication to foster meaningful connections.',
-    image: '/dialed-accountability.png',
-    url: 'https://dialed.tech',
-    links: []
-  },
-  {
-    title: 'Personalized Nose Filters',
-    description: 'Developing personalized 3D-printed nose filters to help people with allergies breathe better. Using video imaging techniques, we capture detailed nasal measurements to ensure optimal comfort and filtration efficiency.',
-    image: '/nose-filters.png',
-    url: '',
+    title: 'Alt-Tab',
+    description: 'A brand focused on helping developers understand and navigate the realities of the corporate software world through blog posts, videos, and community.',
+    image: '/alt-tab.png',
+    url: 'https://alt-tab.co',
     links: []
   }];
 
 
 const PAST_PROJECTS_JSON = [
+  {
+    title: 'Dialed Accountability',
+    description: 'A tool that lets online communities run group accountability challenges with automated check-ins, progress tracking, and member engagement features.',
+    image: '/dialed-accountability.png',
+    url: 'https://www.loom.com/share/7a1e08493a9447a2980b5742a37f788d',
+    links: []
+  },
+  {
+    title: 'Personalized Nose Filters',
+    description: 'Developed prototypes for personalized 3D-printed nose filters to help people with allergies breathe better.',
+    image: '/nose-filter.png',
+    url: '',
+    links: []
+  },
   {
     title: 'Solopreneur Playground',
     description: 'A community that brings together solopreneurs finding their niche to share inspiration, stories, and challenges to help people discover ways to work that feel like play.',
@@ -48,6 +55,7 @@ const PAST_PROJECTS_JSON = [
     title: 'Office Hours App',
     description: 'Built a web app that manages the queueing system for students and TA\'s and provides analytics to professors and administrators at Northeastern.',
     image: '/sandbox-logo.png',
+    url: 'https://news.northeastern.edu/2021/02/02/this-app-helps-students-get-more-face-time-with-professors/',
     links: [{
       icon: "News",
       url: 'https://news.northeastern.edu/2021/02/02/this-app-helps-students-get-more-face-time-with-professors/'
@@ -189,7 +197,7 @@ export default function Home() {
             <h1 className="font-bold text-xl w-60 sm:text-3xl tracking-tight mb-4 text-black dark:text-white">
               Past Projects
             </h1>
-            <div className="flex gap-4 flex-col sm:flex-row sm:items-stretch">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {PAST_PROJECTS_JSON.map(e => <PastProjectCard title={e.title} key={e.title} description={e.description} image={e.image} url={e.url} links={e.links} />)}
             </div>
           </VerticalSectionWrapper>
