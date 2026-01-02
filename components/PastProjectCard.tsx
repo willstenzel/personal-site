@@ -32,10 +32,12 @@ export default function PastProjectCard({ title, description, image, imageLight,
 
     return (
         <div onClick={(e) => {
-                e.preventDefault();
-                window.open(url, "_blank");
+                if (url) {
+                    e.preventDefault();
+                    window.open(url, "_blank");
+                }
             }}
-            className="flex flex-col w-full items-stretch p-4 overflow-hidden bg-white dark:bg-gray-900 border dark:border-white border-slate-200 rounded-lg cursor-pointer transform hover:scale-[1.04] transition-all"
+            className={`flex flex-col w-full items-stretch p-4 overflow-hidden bg-white dark:bg-gray-900 border dark:border-white border-slate-200 rounded-lg ${url ? "cursor-pointer transform hover:scale-[1.04]" : ""} transition-all`}
         >
             <div className="flex gap-6 flex-row items-center" style={{ height: "56px" }}>
                 <div className="my-auto">
