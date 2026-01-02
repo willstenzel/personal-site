@@ -1,6 +1,35 @@
 import ProjectLinks from "./ProjectLinks";
 
-export default function PastProjectCard({ title, description, image, url, links }) {
+export default function PastProjectCard({ title, description, image, imageLight, imageDark, url, links }) {
+    const renderImage = () => {
+        if (image) {
+            return (
+                <img
+                    className="object-cover square rounded-lg"
+                    src={image}
+                    width={50}
+                    alt=""
+                />
+            );
+        }
+        return (
+            <>
+                <img
+                    className="block dark:hidden object-cover square rounded-lg"
+                    src={imageLight}
+                    width={50}
+                    alt=""
+                />
+                <img
+                    className="hidden dark:block object-cover square rounded-lg"
+                    src={imageDark}
+                    width={50}
+                    alt=""
+                />
+            </>
+        );
+    };
+
     return (
         <div onClick={(e) => {
                 e.preventDefault();
@@ -10,12 +39,7 @@ export default function PastProjectCard({ title, description, image, url, links 
         >
             <div className="flex gap-6 flex-row items-center" style={{ height: "56px" }}>
                 <div className="my-auto">
-                    <img
-                        className="object-cover square rounded-lg"
-                        src={image}
-                        width={50}
-                        alt=""
-                    />
+                    {renderImage()}
                 </div>
                 <div className="justify-between sm:flex w-1/2">
                     <p className="text-l font-bold text-slate-900 dark:text-gray-200">

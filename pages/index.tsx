@@ -14,15 +14,23 @@ import ContactForm from 'components/ContactForm';
 
 const CURRENT_PROJECTS_JSON = [
   {
-    title: 'Alt-Tab',
-    description: 'A brand focused on helping developers understand and navigate the realities of the corporate software world through blog posts, videos, and community.',
-    image: '/alt-tab.png',
-    url: 'https://alt-tab.co',
+    title: 'dialed technologies',
+    description: 'Attio consultancy focused on CRM integrations, migrations, and workflow automations for VC firms and startups.',
+    image: '/dialed-technologies.png',
+    url: 'https://www.dialed.tech/',
     links: []
   }];
 
 
 const PAST_PROJECTS_JSON = [
+  {
+    title: 'Alt-Tab',
+    description: 'A brand focused on helping developers understand and navigate the realities of the corporate software world through blog posts, videos, and community.',
+    imageLight: '/alt-tab.png',
+    imageDark: '/alt-tab-inverted.png',
+    url: 'https://alt-tab.co',
+    links: []
+  },
   {
     title: 'Dialed Accountability',
     description: 'A tool that lets online communities run group accountability challenges with automated check-ins, progress tracking, and member engagement features.',
@@ -198,7 +206,7 @@ export default function Home() {
               Past Projects
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {PAST_PROJECTS_JSON.map(e => <PastProjectCard title={e.title} key={e.title} description={e.description} image={e.image} url={e.url} links={e.links} />)}
+              {PAST_PROJECTS_JSON.map(e => <PastProjectCard title={e.title} key={e.title} description={e.description} image={e.image} imageLight={e.imageLight} imageDark={e.imageDark} url={e.url} links={e.links} />)}
             </div>
           </VerticalSectionWrapper>
 
