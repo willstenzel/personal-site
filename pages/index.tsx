@@ -119,57 +119,30 @@ export type Tool = {
 
 const TOOLS: Tool[] = [
   {
+    name: 'Attio',
+    tags: ['CRM', 'Sales'],
+    description: 'Attio is the best CRM hands down. They have built the tool on a great foundation and are constantly improving it. Myself and the dialed technologies team are all in on it.',
+    image: 'attio.png',
+  },
+  {
     name: 'Notion',
-    tags: ['Notes', 'MVPs', 'Project Management'],
+    tags: ['Notes', 'Project Management'],
     description: 'Notion is a glorious tool. I use it to organize all my projects, tasks, and notes. Its database functionality and API make it great for building MVPs.',
     imageLight: 'notion-light.png',
     imageDark: 'notion-dark.png',
   },
   {
-    name: 'Super',
-    tags: ['Hosting', 'Static Sites'],
-    description: "Super is a tool that lets you turn a Notion page into a website. It's great for creating quick landing pages, wikis, and how-to guides.",
-    image: 'super-logo.png',
-  },
-  {
-    name: 'Visual Studio Code',
-    tags: ['Development'],
-    description: "Visual Studio Code is my go to IDE. It's lightweight, fast, and has a great plugin ecosystem.",
-    imageLight: 'vs-code-light.png',
-    imageDark: 'vs-code-dark.png',
+    name: 'Claude Code',
+    tags: ['AI', 'Development'],
+    description: "When ever I'm developing I have a Claude Code session up. The new models are amazing and I'm loving how fast I can move with it.",
+    image: 'claude.png',
   },
   {
     name: 'Next.js',
     tags: ['React', 'Static Sites'],
-    description: "Next.js is a React framework that makes it easy to build static sites and serverless functions. I use it to build this website.",
+    description: "Next.js is a React framework that makes it easy to build static sites and serverless functions. I used it to build this website.",
     imageLight: 'nextjs-light.png',
     imageDark: 'nextjs-dark.png',
-  },
-  {
-    name: 'Tensorflow.js',
-    tags: ['Machine Learning', 'AI'],
-    description: "Tensorflow.js is a library that makes it easy to build machine learning models in the browser. I'm currently using it to help create custom nose filters.",
-    image: 'tensorflow.png',
-  },
-  {
-    name: 'Miro',
-    tags: ['Whiteboarding', 'Flowcharts'],
-    description: "Miro is a tool that lets you create virtual whiteboards. It's great for creating flowcharts and brainstorming ideas.",
-    image: 'miro.png',
-  },
-  {
-    name: 'Tally Forms',
-    tags: ['Forms', 'Surveys'],
-    description: "Tally Forms is a tool that lets you create forms and surveys with a simple Notion style editor. It makes creating forms a breeze.",
-    imageLight: 'tally-forms-light.png',
-    imageDark: 'tally-forms-dark.png',
-  },
-  {
-    name: 'Loops',
-    tags: ['Email Marketing', 'Newsletters'],
-    description: "Loops is a magical email tool. It's has an simple opnionated interface that makes it easy to create beautiful emails and track performance.",
-    imageLight: 'loops-light.png',
-    imageDark: 'loops-dark.png',
   },
 ];
 
@@ -227,16 +200,6 @@ export default function Home() {
               These are some tools I enjoy using
             </p>
             <ToolsListWrapper tools={TOOLS} />
-          </VerticalSectionWrapper>
-
-          <VerticalSectionWrapper id="templates">
-            <h1 className="font-bold mb-1 text-xl sm:text-3xl tracking-tight text-black dark:text-white">
-              Free Templates
-            </h1>
-            <p className="text-gray-500 dark:text-gray-200 text-lg sm:text-xl mb-6">
-              {"These are templates and systems that I’ve created using Notion to streamline or simplify my work. Feel free to use them and adapt them to your own needs."}
-            </p>
-            {FREE_TEMPLATES.map(e => <FreeTemplateCard title={e.name} description={e.description} key={e.name} url={e.url} date={e.date} />)}
           </VerticalSectionWrapper>
 
           <VerticalSectionWrapper id="photos">
