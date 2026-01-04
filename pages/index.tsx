@@ -14,7 +14,7 @@ import ContactForm from 'components/ContactForm';
 
 const CURRENT_PROJECTS_JSON = [
   {
-    title: 'dialed technologies',
+    title: '',
     description: 'Attio consultancy focused on CRM integrations, migrations, and workflow automations for VC firms and startups.',
     image: '/dialed-technologies.png',
     url: 'https://www.dialed.tech/',

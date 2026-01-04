@@ -13,7 +13,7 @@ export default function CurrentProjectCard({ title, description, image, url, lin
             <div className="relative flex mb-5 gap-6 flex-col sm:flex-row sm:items-center">
                 <div className="my-auto">
                     <img
-                        className="object-cover square rounded-lg shadow-sm"
+                        className="object-cover square rounded-lg"
                         src={image}
                         height={600}
                         width={600}
